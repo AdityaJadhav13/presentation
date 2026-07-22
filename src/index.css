@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-base text-navy-900 font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar — light mode */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eef2f7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#93b4f5, #cbd5e1);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+
+  section {
+    scroll-margin-top: 0px;
+  }
+}
+
+@layer components {
+  /* White glassmorphism card with soft shadow */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-card;
+  }
+
+  .glass-strong {
+    @apply bg-white/90 backdrop-blur-2xl border border-slate-200 shadow-card;
+  }
+
+  /* Animated gradient text — deep blue → cyan */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(110deg, #0f172a 5%, #2563eb 45%, #06b6d4 70%, #1d4ed8 100%);
+    background-size: 200% auto;
+    animation: shimmer 8s ease infinite;
+  }
+
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(110deg, #2563eb, #06b6d4);
+  }
+
+  /* Technical grid background — very light, almost transparent */
+  .bg-techgrid {
+    background-image: linear-gradient(rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-electric-500 mb-4;
+  }
+}
+
+@layer utilities {
+  .glow-line {
+    filter: drop-shadow(0 0 3px rgba(37, 99, 235, 0.45));
+  }
+  .glow-line-red {
+    filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.5));
+  }
+  .glow-line-yellow {
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.55));
+  }
+  .glow-line-purple {
+    filter: drop-shadow(0 0 4px rgba(167, 139, 250, 0.55));
+  }
+
+  /* Pause marquee on hover */
+  .pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+}

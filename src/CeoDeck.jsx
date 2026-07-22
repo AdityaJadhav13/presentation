@@ -117,7 +117,7 @@ export default function CeoDeck() {
 
       {/* link back to full deck */}
       <a
-        href="/"
+        href="/full"
         className="fixed left-5 top-5 z-50 flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-navy-600 shadow-card backdrop-blur transition hover:text-electric-600"
       >
         <Icon name="LayoutList" className="h-3.5 w-3.5" />

@@ -5,10 +5,12 @@ import CeoDeck from './CeoDeck.jsx'
 import './index.css'
 
 // Lightweight path routing (no router dependency):
-//   /ceo  → condensed 6-slide leadership deck (additive, parallel build)
-//   /     → the full 13-section site (unchanged)
-const isCeo = window.location.pathname.replace(/\/+$/, '') === '/ceo'
+//   /       → CEO presentation (default)
+//   /ceo    → CEO presentation (alias, keeps old links working)
+//   /full   → the full 13-section site / dashboard
+const path = window.location.pathname.replace(/\/+$/, '')
+const isFull = path === '/full'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>{isCeo ? <CeoDeck /> : <App />}</React.StrictMode>,
+  <React.StrictMode>{isFull ? <App /> : <CeoDeck />}</React.StrictMode>,
 )

@@ -336,6 +336,12 @@ export const SOLUTION = {
       'The 25 LEDs can be logically arranged as a 5 × 5 matrix (LED1 … LED25).',
     angles:
       'This gives lighting from top, bottom, left, right, center, diagonal angles, upper-left, upper-right, lower-left, lower-right, and different height levels.',
+    // 3D design of the physical 25 LED mounting arrangement
+    design: {
+      img: '/hardware-poc/25-led-design.png',
+      label: '25 LED Mounting Design',
+      note: '3D design of the multi-angle LED housing that positions the 25 COB LEDs around the wheel.',
+    },
   },
 
   // ---- TAB 4: Working Logic ----

@@ -342,6 +342,28 @@ function FullTab() {
         <SubHeading>Lighting Coverage</SubHeading>
         <p className="mt-2 text-sm leading-relaxed text-navy-700">{f.angles}</p>
       </div>
+
+      {/* 3D mounting design of the 25 LED housing */}
+      {f.design && (
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+          <div className="flex items-center gap-2 border-b border-slate-200 bg-electric-500/[0.05] px-5 py-3">
+            <Icon name="Box" className="h-4 w-4 text-electric-600" />
+            <span className="text-sm font-bold text-navy-900">{f.design.label}</span>
+            <span className="ml-auto rounded-full bg-electric-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-electric-600">
+              3D Design
+            </span>
+          </div>
+          <div className="flex items-center justify-center bg-slate-50 p-4">
+            <img
+              src={f.design.img}
+              alt={f.design.label}
+              loading="lazy"
+              className="max-h-[520px] w-auto max-w-full rounded-lg object-contain"
+            />
+          </div>
+          <p className="px-5 py-3 text-xs text-navy-600">{f.design.note}</p>
+        </div>
+      )}
     </div>
   )
 }

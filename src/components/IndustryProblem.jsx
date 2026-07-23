@@ -166,7 +166,7 @@ function TheoryPanel() {
   )
 }
 
-export default function IndustryProblem() {
+export default function IndustryProblem({ index = '02' }) {
   return (
     <section id="problem" className="relative w-full px-5 py-24 sm:px-8 md:py-32 lg:px-16">
       <div className="mx-auto w-full max-w-7xl">
@@ -180,7 +180,7 @@ export default function IndustryProblem() {
         >
           <span className="section-label">
             <span className="h-px w-8 bg-electric-500/60" />
-            02 / The Industry Problem
+            {index} / The Industry Problem
           </span>
           <h2 className="max-w-4xl text-3xl font-bold leading-[1.1] tracking-tight text-navy-900 sm:text-4xl lg:text-5xl">
             {PROBLEM.title}

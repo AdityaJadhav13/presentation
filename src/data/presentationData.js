@@ -266,6 +266,7 @@ export const SOLUTION = {
     image: '/proposal/stage1-5led-setup.jpg',
     // Real Stage-1 POC hardware photos (shown in the POC tab visual)
     photos: [
+      { img: '/hardware-poc/circuit2.jpg', label: 'Full Assembly' },
       { img: '/hardware-poc/circuit.jpg', label: 'Control Circuit' },
       { img: '/hardware-poc/led-setup.jpg', label: '5 LED Setup' },
       { img: '/hardware-poc/object-shadow.jpg', label: 'Object + Shadow' },
@@ -278,6 +279,7 @@ export const SOLUTION = {
         { img: '/hardware-poc/L1_annotated.jpg', label: 'LED 1' },
         { img: '/hardware-poc/L2_annotated.jpg', label: 'LED 2' },
         { img: '/hardware-poc/L3_annotated.jpg', label: 'LED 3' },
+        { img: '/hardware-poc/L4_annotated.jpg', label: 'LED 4' },
         { img: '/hardware-poc/L5_annotated.jpg', label: 'LED 5' },
       ],
     },

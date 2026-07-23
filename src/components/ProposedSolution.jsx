@@ -246,8 +246,8 @@ function PocTab() {
     <div className="space-y-7">
       <p className="max-w-3xl text-sm leading-relaxed text-navy-600 md:text-base">{p.intro}</p>
 
-      {/* Real POC hardware photos — all three, large and fully visible (no cropping) */}
-      <div className="grid gap-5 md:grid-cols-3">
+      {/* Real POC hardware photos — large and fully visible (no cropping) */}
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {p.photos.map((ph) => (
           <PocPhoto key={ph.img} photo={ph} />
         ))}
@@ -258,7 +258,7 @@ function PocTab() {
         <div>
           <SubHeading>{p.annotated.heading}</SubHeading>
           <p className="mt-1.5 mb-3 text-xs text-navy-600">{p.annotated.note}</p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {p.annotated.shots.map((ph) => (
               <PocPhoto key={ph.img} photo={ph} />
             ))}

@@ -270,6 +270,23 @@ export const SOLUTION = {
       { img: '/hardware-poc/led-setup.jpg', label: '5 LED Setup' },
       { img: '/hardware-poc/object-shadow.jpg', label: 'Object + Shadow' },
     ],
+    // Per-LED annotated shadow-measurement captures (different lighting angles)
+    annotated: {
+      heading: 'Shadow Measurement per LED Angle',
+      note: 'Same object, different LED direction — each angle casts a different shadow, giving a distinct measurement.',
+      shots: [
+        { img: '/hardware-poc/L1_annotated.jpg', label: 'LED 1' },
+        { img: '/hardware-poc/L2_annotated.jpg', label: 'LED 2' },
+        { img: '/hardware-poc/L3_annotated.jpg', label: 'LED 3' },
+        { img: '/hardware-poc/L5_annotated.jpg', label: 'LED 5' },
+      ],
+    },
+    // 12 V vs 18 V LED-drive comparison (single stacked image)
+    voltage: {
+      heading: 'Difference of 12 V vs 18 V',
+      img: '/hardware-poc/voltage-12v-18v.jpg',
+      note: 'Higher LED drive voltage changes brightness and shadow contrast — 12 V (top) vs 18 V (bottom).',
+    },
     intro:
       'The current stage uses 5 high-CRI COB LEDs placed around the wheel. Each LED turns ON one by one while the wheel and camera remain fixed.',
     positions: [

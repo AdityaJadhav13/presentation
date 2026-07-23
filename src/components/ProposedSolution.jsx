@@ -253,6 +253,38 @@ function PocTab() {
         ))}
       </div>
 
+      {/* Annotated shadow-measurement captures per LED angle */}
+      {p.annotated && (
+        <div>
+          <SubHeading>{p.annotated.heading}</SubHeading>
+          <p className="mt-1.5 mb-3 text-xs text-navy-600">{p.annotated.note}</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {p.annotated.shots.map((ph) => (
+              <PocPhoto key={ph.img} photo={ph} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 12 V vs 18 V LED-drive comparison */}
+      {p.voltage && (
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+          <div className="mb-2 flex items-center gap-2">
+            <Icon name="Zap" className="h-4 w-4 text-ledglow" />
+            <SubHeading>{p.voltage.heading}</SubHeading>
+          </div>
+          <p className="mb-3 text-xs text-navy-600">{p.voltage.note}</p>
+          <div className="flex items-center justify-center rounded-xl bg-slate-50 p-3">
+            <img
+              src={p.voltage.img}
+              alt={p.voltage.heading}
+              loading="lazy"
+              className="max-h-[460px] w-auto max-w-full rounded-lg object-contain"
+            />
+          </div>
+        </div>
+      )}
+
       {/* proves */}
       <div className="rounded-xl border border-slate-200 bg-surface-soft/50 p-5">
         <SubHeading>The 5 LED POC Will Prove</SubHeading>

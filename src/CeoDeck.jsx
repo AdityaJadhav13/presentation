@@ -16,13 +16,13 @@ import RoadmapSlide from './components/RoadmapSlide'
 // `index` overrides the eyebrow number so numbering matches the deck order
 // (without changing the full 13-section site at /).
 const SLIDES = [
-  { id: 'problem', label: 'The Industry Problem', Component: IndustryProblem, props: { index: '01' } },
-  { id: 'objective', label: 'Objective', Component: Objective, props: { index: '02' } },
-  { id: 'existing', label: 'Existing Solutions', Component: ExistingSolutions, props: { index: '03' } },
   { id: 'hero', label: 'Overview', Component: Hero },
-  { id: 'solution', label: 'Proposed Solution', Component: ProposedSolution, props: { index: '04' } },
-  { id: 'software', label: 'Software Development Progress', Component: SoftwareProgress, props: { index: '05' } },
-  { id: 'roadmap-future', label: 'Future Development Roadmap', Component: RoadmapSlide, props: { index: '06' } },
+  { id: 'problem', label: 'The Industry Problem', Component: IndustryProblem, props: { index: '02' } },
+  { id: 'objective', label: 'Objective', Component: Objective, props: { index: '03' } },
+  { id: 'existing', label: 'Existing Solutions', Component: ExistingSolutions, props: { index: '04' } },
+  { id: 'solution', label: 'Proposed Solution', Component: ProposedSolution, props: { index: '05' } },
+  { id: 'software', label: 'Software Development Progress', Component: SoftwareProgress, props: { index: '06' } },
+  { id: 'roadmap-future', label: 'Future Development Roadmap', Component: RoadmapSlide, props: { index: '07' } },
 ]
 
 export default function CeoDeck() {

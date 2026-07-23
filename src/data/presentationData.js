@@ -1067,6 +1067,14 @@ export const SOFTWARE = {
       'Object height is estimated from its cast shadow under controlled lighting — measured against a calibrated reference grid.',
   },
 
+  // Shadow length vs LED brightness level (0–100%)
+  levels: {
+    img: '/dashboard/levels.jpg',
+    label: 'Shadow Length vs LED Brightness Level',
+    caption:
+      'As LED brightness increases from 0% to 100%, the measured shadow contour changes — used to characterise and calibrate the lighting for consistent measurement.',
+  },
+
   phases: [
     {
       icon: 'LayoutDashboard',

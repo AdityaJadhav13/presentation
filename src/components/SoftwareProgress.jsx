@@ -7,7 +7,7 @@ import Icon from './Icon'
 const S = SOFTWARE
 
 /** Shadow-based height-measurement reference — shown fully (no cropping). */
-function HeightReference({ data: r }) {
+function HeightReference({ data: r, icon = 'Ruler', badge = 'Measurement Reference', maxH = 'max-h-[420px]' }) {
   const [ok, setOk] = useState(true)
   return (
     <motion.div
@@ -18,20 +18,20 @@ function HeightReference({ data: r }) {
       className="mt-6 overflow-hidden rounded-2xl border border-electric-500/30 bg-white shadow-card"
     >
       <div className="flex items-center gap-2 border-b border-slate-200 bg-electric-500/[0.05] px-5 py-3">
-        <Icon name="Ruler" className="h-4 w-4 text-electric-600" />
+        <Icon name={icon} className="h-4 w-4 text-electric-600" />
         <span className="text-sm font-bold text-navy-900">{r.label}</span>
         <span className="ml-auto rounded-full bg-electric-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-electric-600">
-          Measurement Reference
+          {badge}
         </span>
       </div>
-      <div className="flex items-center justify-center bg-slate-50 p-3">
+      <div className="flex items-center justify-center bg-slate-50 p-4">
         {ok ? (
           <img
             src={r.img}
             alt={r.label}
             loading="lazy"
             onError={() => setOk(false)}
-            className="max-h-[420px] w-auto max-w-full rounded-lg object-contain"
+            className={`${maxH} w-auto max-w-full rounded-lg object-contain`}
           />
         ) : (
           <div className="flex h-56 w-full flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-slate-300 text-slate-400">
@@ -133,6 +133,16 @@ export default function SoftwareProgress({ index = '13' }) {
 
       {/* Shadow-based height-measurement reference */}
       {S.heightRef && <HeightReference data={S.heightRef} />}
+
+      {/* Shadow length vs LED brightness level — shown large */}
+      {S.levels && (
+        <HeightReference
+          data={S.levels}
+          icon="Layers"
+          badge="Brightness Study"
+          maxH="max-h-[640px]"
+        />
+      )}
 
       {/* Phases */}
       <div className="mt-12 grid gap-5 lg:grid-cols-3">
